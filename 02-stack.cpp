@@ -2,11 +2,14 @@
 using namespace std;
 class stack
 {
-    public: int top = -1, arr[6];
-    public: int value;
+public:
+    int top = -1, arr[6];
+
+public:
+    int value;
     void push()
     {
-        if(top == 5)
+        if (top == 5)
         {
             cout << "Stack is full" << endl;
         }
@@ -20,7 +23,7 @@ class stack
     }
     void pop()
     {
-        if(top == -1)
+        if (top == -1)
         {
             cout << "Stack is empty" << endl;
         }
@@ -32,14 +35,14 @@ class stack
     }
     void display()
     {
-        if(top == -1)
+        if (top == -1)
         {
             cout << "Stack is empty" << endl;
         }
         else
         {
             cout << "Stack: ";
-            for(int i = 0; i <= top; i++)
+            for (int i = 0; i <= top; i++)
             {
                 cout << arr[i] << " ";
             }
@@ -52,7 +55,7 @@ int main()
 {
     stack s;
     int choice;
-    while(1)
+    while (1)
     {
         cout << "1. Push" << endl;
         cout << "2. Pop" << endl;
@@ -60,16 +63,21 @@ int main()
         cout << "4. Exit" << endl;
         cout << "Enter your choice: ";
         cin >> choice;
-        switch(choice)
+        switch (choice)
         {
-            case 1: s.push();
-                    break;
-            case 2: s.pop();
-                    break;
-            case 3: s.display();
-                    break;
-            case 4: exit(0);
-            default: cout << "Invalid choice, please choose from options." << endl;
+        case 1:
+            s.push();
+            break;
+        case 2:
+            s.pop();
+            break;
+        case 3:
+            s.display();
+            break;
+        case 4:
+            exit(0);
+        default:
+            cout << "Invalid choice, please choose from options." << endl;
         }
     }
     return 0;
