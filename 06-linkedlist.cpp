@@ -46,7 +46,7 @@ public:
                 current = current->next;
             }
             current->next = newNode;
-        }
+        }   
     }
 
     void insertAtPosition(int value, int position)
